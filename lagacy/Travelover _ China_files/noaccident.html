@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://china.travelover.co.kr/noaccident.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<script src="./1.9.1jquery.min.js" type="text/javascript"></script>
+<script src="./1.11.1jquery.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="./1.8.18jquery-ui.css" type="text/css" media="all">
+<script type="text/javascript" src="./jsapi"></script>
+<script src="./1.10.3jquery-ui.js" type="text/javascript"></script>
+<script src="./default.js" type="text/javascript"></script>
+
+<title>출국후 무사고 확인서</title>
+<style>
+body {
+	overflow-x: hidden;
+}
+.wrap {
+	max-width: 830px; width: 100%;
+	min-height: 20px;
+	border: solid 2px #000;
+	font-family: 나눔고딕;
+	font-size: 14px;
+	margin: 50px auto;
+	padding: 10px;
+} 
+.wrap .headTitle {text-align: center; margin: 10px auto; font-size: 17pt; font-weight: bold;}
+.wrap .notice_1 {text-align: center; font-size: 9pt; }
+.wrap .notice_2 {text-align: left; font-size: 8pt; color: red;}
+.wrap .notice_3 {text-align: left; font-size: 11pt; color: #000;}
+.wrap .cont {margin: 20px auto; font-size: 10pt;}
+.wrap .title {font-weight: bold; margin: 5px 0;}
+.wrap .cont table {border-collapse: collapse; max-width: 830px; width: 100%;}
+.wrap .cont th, td{font-weight: normal; border: 1px solid #000; padding: 3px;}
+.wrap .cont table th {width: 20%;}
+.wrap .goji table {font-size: 8pt;}
+.wrap .cont_2 {margin: 20px auto; }
+.wrap .cont_2 .txt_1 {text-align: center; margin: 5px auto;}
+.wrap .cont_2 .txt_2 {text-align: left;margin: 3px auto;}
+.wrap .cont_2 .txt_3 {text-align: center;margin: 15px auto;}
+.msgBtn {
+	color: #dc425c;
+    border: 2px solid #dc425c;
+    background: none;
+    padding: 5px 25px;
+    cursor: pointer;
+	font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 3px;
+}
+.msgBtn:hover {color: #fff; background: #dc425c;}
+
+#accordion {width:100%; margin: 10px auto;}
+#accordion .flip {font-size:12px; font-weight:bold; color:#595959;  border: 0; padding:10px; margin:5px; cursor:pointer;}
+#accordion .red {color:red; font-weight:bold;}
+#accordion .chk {float: right;}
+#accordion .panel {padding: 0px; font-size: 12px;  margin:5px;  border: 0; max-height: 200px; text-align: center; }
+#accordion .panel .agre_txt {text-align: left; padding-left: 20px; margin: 10px 0;}
+#accordion .panel iframe {width: 95%; margin: 0 auto; overflow-x: hidden !important; overflow-y: scroll !important; }
+#accordion .check_pannel {padding:0 0 20px 30px; font-size:14px; }
+
+	iframe.popup {
+	position: fixed;
+	z-index: 999;
+	top: 100px;
+	left: 100px;
+	overflow: hidden;
+	display: none;
+}
+
+
+
+#interest_free_lguplus {
+/*	left: 50%;
+	margin-left: -351px;
+	border: 3px solid #f7c74d;
+    */
+    width: 550px;    height : 740px;top: 100px;    left: 650px; border:2px solid #1899ac; 
+}
+
+
+
+#interest_free_lguplus_smartro {
+/*
+	left: 50%;
+	margin-left: -298px;
+	border: 3px solid #f7c74d;
+    */
+    width: 550px;    height : 740px;top: 100px;    left: 650px; border:2px solid #1899ac; 
+}
+
+
+
+</style>
+<script type="text/javascript">
+<!--
+function trim (str) {
+	return str.replace(/(^\s*)|(\s*$)/gi, "");
+}
+
+
+function j_nex () {
+	a = document.msg.jumin1;
+	b = document.msg.jumin2;
+	if (a.value.length == 6) { 
+		b.focus(); 
+	}
+}
+
+function j_chk () {
+var a = document.msg.jumin1;
+var b = document.msg.jumin2;
+var pyear = a.value.substr(0, 2);
+var pmonth = a.value.substr(2, 2);
+var pday = a.value.substr(4, 2);
+var pj = b.value.substr(0, 1);
+var jumin1 = a.value.substr(0,6);
+var jumin2 = b.value.substr(0,7);	
+document.msg.age.value = "";
+	if(!a.value) {
+		alert("주민번호를 입력해주세요");
+		a.focus();
+		return false;
+	}
+	if(!b.value) {
+		alert("주민번호를 입력해주세요");
+		b.focus();
+		return false;
+	}
+	if (pmonth > 12){
+		alert ("주민번호 <월> 똑바로");
+		return false;
+	}
+	if (pday > 31){
+		alert ("주민번호 <일> 똑바로");
+		return false;
+	}
+	if(a.value.length > 6) {
+		a.value = a.value.substr(0,6);
+	}
+	if (b.value.length == "7") {
+
+    var sum = 0;
+    sum += jumin1.charAt(0)*2;
+    sum += jumin1.charAt(1)*3;
+    sum += jumin1.charAt(2)*4;
+    sum += jumin1.charAt(3)*5;
+    sum += jumin1.charAt(4)*6;
+    sum += jumin1.charAt(5)*7;
+    sum += jumin2.charAt(0)*8;
+    sum += jumin2.charAt(1)*9;
+    sum += jumin2.charAt(2)*2;
+    sum += jumin2.charAt(3)*3;
+    sum += jumin2.charAt(4)*4;
+    sum += jumin2.charAt(5)*5;
+
+    check = (11 - sum % 11) % 10;
+
+    if (jumin2.charAt(6) != check || (jumin1.length != 6 && jumin2.length != 7))
+    {
+		alert ("잘못된 주민번호 입니다.");
+      return false;
+    } 
+
+    if(!(jumin2.charAt(0) == '1' || jumin2.charAt(0)  == '2' || jumin2.charAt(0) == '3' || jumin2.charAt(0) == '4'))
+    {
+		alert ("잘못된 주민번호 입니다.");
+      return false;
+    }
+		if (pj == "1" || pj == "2")
+			pyear = "19" + pyear;
+		else
+			pyear = "20" + pyear;
+		var startDttm = document.msg.start_date.value;
+		var year, month, day;
+		if(!startDttm) {
+			year = '2017';
+			month = '11';
+			day = '10';
+		} else {
+			year = startDttm.substr(0, 4);
+			month = startDttm.substr(5, 2);
+			day = startDttm.substr(8, 2);
+		}
+		var age = 0;
+		var month2 = month;
+		var year2 = year;
+
+		if(day < pday) // 출발이후에 생일이 있으면
+		{
+			month2 = month2 - 1;
+		}
+		if(month2 < pmonth)
+		{
+			var gap_month = month2 + 12 - pmonth;
+			var year2 = year2 - 1;
+		}
+		else
+		{
+			var gap_month = month2  - pmonth;
+		}
+
+		var gap_year = year2 - pyear;
+			
+		if(gap_month >= 6 && gap_year > 14 && gap_year < 69)
+		{
+				gap_year = gap_year + 1;
+		}
+	document.msg.age.value = gap_year;
+	}
+	if(gap_year) {
+		var f = document.msg;
+		if(gap_year > 19) {
+			f.dName.disabled = true;
+			f.mName.disabled = true;
+			f.dCel.disabled = true;
+			f.mCel.disabled = true;
+		} else {
+			f.dName.disabled = false;
+			f.mName.disabled = false;
+			f.dCel.disabled = false;
+			f.mCel.disabled = false;
+		}
+	}
+}
+
+
+function setValue() {
+	var f = document.msg;
+
+	f.category1.value = "";
+	f.category2.options[0].selected = true;
+	f.plan.value = "";
+	f.premium_won.value = "";
+	f.premium_yi.value = "";
+}
+
+  $(function() {
+	  var startY = '2017';
+	  var startM = '11';
+	  var startD = '10';
+		$( "#start_date_cn, #end_date_cn" ).datepicker({
+				closeText: '닫기',
+				prevText: '이전',
+				nextText: '다음',
+				currentText: '오늘',
+				monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+				monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+				dayNames: ['일','월','화','수','목','금','토'],
+				dayNamesShort: ['일','월','화','수','목','금','토'],
+				dayNamesMin: ['일','월','화','수','목','금','토'],
+				dateFormat: 'yy-mm-dd',
+				yearRange: 'c-0:c+5',
+				changeYear: true,
+				minDate: ' - 1 M ',
+				onSelect : function (dateText) {  
+					var cur = new Date(startY, startM - 1, startD);
+					console.log(cur);
+					setValue();
+					j_chk();
+	            }
+		});
+		$(".ui-datepicker").css("font-size", "13px");
+});
+
+function depositFunc (e) {
+	var deDate = $( "input[name='depositDate']" );
+	$( deDate ).datepicker({
+			 duration: "fast",
+			closeText: '닫기',
+			prevText: '이전',
+			nextText: '다음',
+			currentText: '오늘',
+			monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+			monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+			dayNames: ['일','월','화','수','목','금','토'],
+			dayNamesShort: ['일','월','화','수','목','금','토'],
+			dayNamesMin: ['일','월','화','수','목','금','토'],
+			dateFormat: 'yy-mm-dd',
+			changeYear: true,
+			maxDate: '+7d',
+			minDate: '0d'
+	});
+}
+
+
+$(function() {
+	$( "#accordion" ).accordion({
+		active: false, 
+		collapsible: true
+	});
+	$('#accordion input[type="checkbox"],input[type="radio"] ').click(function(e) {
+		e.stopPropagation();
+	});
+	$( "#accordion" ).on( "accordionactivate", function( ) {
+		var idx = $( "#accordion" ).accordion( "option", "active") + 1;
+		var chk = "input[name$='chk_"+idx+"']";
+		if(idx == "8") {
+			$("input[name$='chk_8'], input[name$='chk_8_1']").attr("checked", true);
+		} else if (idx == "9") {
+			$("input:radio[name='chk_9']:radio[value='1']").attr("checked", true);
+			
+		}else {
+			if($(chk).attr("checked") == true) {
+				$(chk).attr("checked", false);
+			} else {
+				$(chk).attr("checked", true);
+			}
+		}
+
+	});
+});
+
+
+
+function appOpen() {
+
+	var frm = document.msg;
+	var start_dttm = frm.start_date.value.split("-");
+	var end_dttm = frm.end_date.value.split("-");
+	var start_date = start_dttm[0] + start_dttm[1] + start_dttm[2];
+	var end_date = end_dttm[0] + end_dttm[1] + end_dttm[2];
+	var cur_date = 2017-11-10;
+
+	// 대분류
+	var category1 = "3";
+	var category2 = frm.category2.value;
+	var per_num = 1;
+
+	if(frm.category2.value != "") 
+	{
+		if(!trim(frm.start_date.value)) {
+			alert("시작일을 선택바랍니다.");
+			return false;
+		}
+		if(!trim(frm.end_date.value)) {
+			alert("종료일을 선택바랍니다.");
+			return false;
+		}
+		if (frm.start_date.value < cur_date)
+		{
+			alert('시작일을 1개월 이후로 선택하시기 바랍니다.');
+			frm.category2.options[0].selected = true;
+			return false;
+		}
+		else if(start_date >= end_date) {
+			alert('기간을 정확히 입력해 주시기 바랍니다.');
+			frm.category2.options[0].selected = true;
+			return false;
+		}
+		else 
+		{
+		window.open("./noacci_table.html?s_date="+start_date+"&e_date="+end_date+"&category2="+category2+"&per_num="+per_num, "insure", "toolbar=no, menubar=no, scrollbars=no, resizable=no, width=1185, height=700, left=0, top=0");		
+		}
+	}
+}
+
+
+function cv_chg() {
+	var card_v = document.msg.card_com;
+	var cv_ment = document.getElementById("cv_nm");
+	if(card_v.value == "롯데아멕스") {
+		cv_ment.innerHTML = "카드앞면 고유번호 4자리 : ";
+	}	
+}
+
+function slcPayMethod(idx) {
+	var idx = idx;
+	var tbl = document.getElementById('payMode');
+	var tblTrLength = tbl.rows.length;
+	if(tblTrLength != 1) {
+		$("#payMode tr:not(:first)").remove();
+	}
+
+	if(idx == 1) {
+		tbl.insertRow(-1).innerHTML = '<th> 중국 입금 계좌</th> <td colspan="3"> <strong>100-201-257805 우리은행 북경왕징지점 (WJBJ) LEE DALHO</strong></td>';
+		tbl.insertRow(-1).innerHTML = '<th>입금예정일</th><td><input type="text" name="depositDate" onfocus="depositFunc(this)" placeholder="신청일 기준 7일이내" autocomplete="off" ></td>'
+												+	'<th>입금자명</th><td><input type="text" name="method_1_nm"></td>';
+	} else if(idx == 2) {
+
+		tbl.insertRow(-1).innerHTML = '<th> 원화 입금 계좌</th><td colspan="3"> <strong>479001-01-108739 국민은행 ㈜여행자보험몰</strong></td>';
+		tbl.insertRow(-1).innerHTML = '<th>입금예정일</th><td><input type="text" name="depositDate" onfocus="depositFunc(this)" placeholder="신청일 기준 7일이내" autocomplete="off" ></td>'
+												+	'<th>입금자명</th><td><input type="text" name="method_2_nm"></td>';
+
+	} else if(idx == 3) {
+		tbl.insertRow(-1).innerHTML = '<th>카드결제</th>'
+												+ '<td colspan="3">카드사: '
+												+ '<select name="card_com" style="width: 120px;" onchange="cv_chg();">'
+												+ '<option value="0">카드사</option>'
+												+ '<option value="비씨">비씨</option>'
+												+ '<option value="국민">국민</option>'
+												+ '<option value="롯데">롯데</option>'
+												+ '<option value="롯데아멕스">롯데아멕스</option>'
+												+ '<option value="삼성">삼성</option>'
+												+ '<option value="신한">신한</option>'
+												+ '<option value="외환">외환</option>'
+												+ '<option value="현대">현대</option>'
+												+ '<option value="농협">농협</option>'
+												+ '<option value="광주">광주</option>'
+												+ '<option value="전북">전북</option>'
+												+ '<option value="시티">시티</option>'
+												+ '<option value="하나SK">하나SK</option>'
+												+ '<option value="우체국">우체국</option>'
+												+ '<option value="새마을">새마을금고</option>'
+												+ '</select> 카드번호: '
+												+ '<input type="text" name="card_num1" size="4"> - '
+												+ '<input type="text" name="card_num2" size="4"> - '
+												+ '<input type="text" name="card_num3" size="4"> - '
+												+ '<input type="text" name="card_num4" size="4"> '
+												+ '<br> <br> 유효기간: '
+												+ '<select name="card_y" style="width: 70px;">'
+													+ '<option value="0">년</option>'
+													+ '<option value="16">2016</option>'
+													+ '<option value="17">2017</option>'
+													+ '<option value="18">2018</option>'
+													+ '<option value="19">2019</option>'
+													+ '<option value="20">2020</option>'
+													+ '<option value="21">2021</option>'
+													+ '<option value="22">2022</option>'
+													+ '<option value="23">2023</option>'
+													+ '<option value="24">2024</option>'
+													+ '<option value="25">2025</option>'
+													+ '<option value="26">2026</option>'
+													+ '<option value="27">2027</option>'
+												+ '</select> 년 '
+												+ '<select name="card_m" style="width: 50px;">'
+												+ '<option value="0">월</option>'
+												+ '<option value="01">1</option>'
+												+ '<option value="02">2</option>'
+												+ '<option value="03">3</option>'
+												+ '<option value="04">4</option>'
+												+ '<option value="05">5</option>'
+												+ '<option value="06">6</option>'
+												+ '<option value="07">7</option>'
+												+ '<option value="08">8</option>'
+												+ '<option value="09">9</option>'
+												+ '<option value="10">10</option>'
+												+ '<option value="11">11</option>'
+												+ '<option value="12">12</option>'
+											+ '</select> 월'
+											+ '<span id="cv_nm">cvc: </span>'
+											+ '<input type="text" name="cvc" size="10">'
+											+ '소유주 : <input type="text" name="card_user" style="width: 80px;">'
+										+ '</td>';
+	} else {}
+
+
+}
+
+// 2016-12-27 adan
+// 개월 더하는 로직 추가 2016-12-16 adan
+// 윤달
+Date.isLeapYear = function (year) { 
+     return (((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0)); 
+};
+// 
+Date.getDaysInMonth = function (year, month) {
+     return [31, (Date.isLeapYear(year) ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
+};
+
+Date.prototype.isLeapYear = function () { 
+     return Date.isLeapYear(this.getFullYear()); 
+};
+
+Date.prototype.getDaysInMonth = function () { 
+     return Date.getDaysInMonth(this.getFullYear(), this.getMonth());
+};
+
+Date.prototype.addMonths = function (value) {
+     var n = this.getDate();
+     this.setDate(1);
+     this.setMonth(this.getMonth() + value);
+     this.setDate(Math.min(n, this.getDaysInMonth()));
+
+    var day = ("0" + this.getDate()).slice(-2)
+    ,   month = ("0" + (this.getMonth() + 1)).slice(-2)
+    ,   year = this.getFullYear();
+    
+    return year+"-"+month+"-"+day;
+};
+
+var chkBtDay = function(a){
+    var sDt1 = $('[name="start_date"]').val().split('-')
+    ,   eDt1 = $('[name="end_date"]').val().replace(/\-/g, '')
+    ,   sDt = new Date(sDt1[0], sDt1[1]-1, sDt1[2], 0, 0, 0, 0).addMonths(1).split("-") 
+    ,   eDt = new Date(sDt[0], sDt[1]-1, sDt[2]-1, 0, 0, 0, 0)
+    ,   eDtY = eDt.getFullYear().toString()
+    ,   eDtM = (eDt.getMonth()+1).toString().length < 2 ? '0'+(eDt.getMonth()+1).toString() : (eDt.getMonth()+1).toString()
+    ,   eDtD = eDt.getDate().toString().length < 2 ? '0'+eDt.getDate().toString() : eDt.getDate().toString()
+    ,   eDtS = eDtY+eDtM+eDtD
+    ,   eDtP = eDt1
+    ,   a = a;
+
+    if(eDtS > eDtP){
+        alert("보험가입 기간은 한 달 이상입니다.");
+        //$('[name="end_date3"]').val(eDtS.substr(6,2)); 
+        return false;
+    }   
+    return true;
+}
+
+function chkFrm () {
+	var frm = document.msg;
+       if(!chkBtDay()){
+        return false;
+    }
+
+	if(frm.chk_1.checked == false ) {
+		alert("보험회사 및 보험모집자에 대한 정보에 관한 사항 및 보험상품의 보험료납입기간, 보험기간에 대한 보험계약의 개요에 동의바랍니다.");
+		frm.chk_1.focus();
+		return false;
+	}
+	if(frm.chk_2.checked == false ) {
+		alert("여행보험 보통약관에 확인하셔야 가입할 수 있습니다.");
+		frm.chk_2.focus();
+		return false;
+	}
+	if(frm.chk_3.checked == false ) {
+		alert("보험사고처리 기준 주요사항 안내에 확인하셔야 가입할 수 있습니다.");
+		frm.chk_3.focus();
+		return false;
+	}
+	if(frm.chk_4.checked == false ) {
+		alert("소비자 권익보호에 관한 사항에 확인하셔야 가입할 수 있습니다.");
+		frm.chk_4.focus();
+		return false;
+	}
+	if(frm.chk_5.checked == false ) {
+		alert("개인(신용)정보의 수집·이용에 관한 사항에 확인하셔야 가입할 수 있습니다.");
+		frm.chk_5.focus();
+		return false;
+	}
+	if(frm.chk_6.checked == false ) {
+		alert("개인(신용)정보의 조회에 관한 사항에 확인하셔야 가입할 수 있습니다.");
+		frm.chk_6.focus();
+		return false;
+	}
+	if(frm.chk_7.checked == false ) {
+		alert("개인(신용)정보의 제공에 관한 사항에 확인하셔야 가입할 수 있습니다.");
+		frm.chk_7.focus();
+		return false;
+	}
+	if(frm.chk_8.checked == false ) {
+		alert("질병·상해정보 처리에 동의에 확인하셔야 가입할 수 있습니다.");
+		frm.chk_8.focus();
+		return false;
+	}
+	if(frm.chk_8_1.checked == false ) {
+		alert("주민등록번호, 외국인등록번호 처리에 동의에 확인하셔야 가입할 수 있습니다.");
+		frm.chk_8.focus();
+		return false;
+	}
+
+	if(!trim(frm.name.value)) {
+		alert("성명을 입력해주세요");
+		frm.name.focus();
+		return false;
+	}
+	if(!trim(frm.eng_name.value)) {
+		alert("성명을 입력해주세요");
+		frm.eng_name.focus();
+		return false;
+	}
+	if(!trim(frm.jumin1.value)) {
+		alert("주민번호를 입력해주세요");
+		frm.jumin1.focus();
+		return false;
+	}
+	if(!trim(frm.jumin2.value)) {
+		alert("주민번호를 입력해주세요");
+		frm.jumin2.focus();
+		return false;
+	}
+	if(!trim(frm.age.value)) {
+		alert("주민번호를 정확히 입력해주세요");
+		frm.jumin1.value = "";
+		frm.jumin2.value = "";
+		frm.jumin1.focus();
+		return false;
+	}
+	if(!trim(frm.cel.value)) {
+		alert("본인 휴대폰을 입력해주세요");
+		frm.cel.focus();
+		return false;
+	}
+	if(!trim(frm.email.value)) {
+		alert("E-mail을 입력해주세요");
+		frm.email.focus();
+		return false;
+	}
+	var regex=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;   
+	if(regex.test(frm.elements['email'].value) === false) {  
+		alert("잘못된 이메일 형식입니다.");  
+		frm.elements['email'].value = "";
+		frm.elements['email'].focus();
+		return false;  
+	}
+	if(!trim(frm.relCel.value)) {
+		alert("기타(비상)연락망을 입력해주세요");
+		frm.relCel.focus();
+		return false;
+	}
+	if(frm.rel.value == "" || frm.rel.value == "0") {
+		alert("기타(비상)연락망의 관계를 선택해주세요");
+		frm.rel.focus();
+		return false;
+	}
+	if(!trim(frm.job.value)) {
+		alert("직업을 입력해주세요");
+		frm.job.focus();
+		return false;
+	}
+	if(!trim(frm.pps.value)) {
+		alert("체류목적을 입력해주세요");
+		frm.pps.focus();
+		return false;
+	}
+	if(!trim(frm.addr.value)) {
+		alert("현지주소를 입력해주세요");
+		frm.addr.focus();
+		return false;
+	}
+	var slcCelLen = frm.slcCel.length;
+	var isSlcCel = false;
+	for(i=0; i<slcCelLen; i++) {
+		if(frm.slcCel[i].checked) {
+			isSlcCel = true;
+		}
+	}
+	if(isSlcCel == false) {
+		alert("수신(희망)가능 연락처를 선택해주세요");
+		frm.slcCel[0].focus();
+		return false;		
+	}
+	if(!trim(frm.callDttm.value)) {
+		alert("통화(희망)가능 한국 시간대를 입력해주세요");
+		frm.callDttm.focus();
+		return false;
+	}
+	var age = frm.age.value;
+	if(trim(age) && age < 20) {
+		if(!trim(frm.dName.value)) {
+			alert("(부)성명을 입력해주세요 (미성년자 필수 기입)");
+			frm.dName.focus();
+			return false;
+		}
+		if(!trim(frm.mName.value)) {
+			alert("(모)성명을 입력해주세요 (미성년자 필수 기입)");
+			frm.mName.focus();
+			return false;
+		}
+		if(!trim(frm.dCel.value)) {
+			alert("(부)휴대폰 번호를 입력해주세요 (미성년자 필수 기입)");
+			frm.dCel.focus();
+			return false;
+		}
+		if(!trim(frm.mCel.value)) {
+			alert("(모)휴대폰 번호를 입력해주세요 (미성년자 필수 기입)");
+			frm.mCel.focus();
+			return false;
+		}
+	}
+
+	if(!trim(frm.nmApp.value)) {
+		alert("계약 신청자의 성함을 입력해주세요");
+		frm.nmApp.focus();
+		return false;
+	}
+	if(frm.slcApp.value == "" || frm.slcApp.value == "0") {
+		alert("계약 신청자의 관계를 선택해주세요");
+		frm.slcApp.focus();
+		return false;
+	}
+	if(!trim(frm.start_date.value)) {
+		alert("출발일자를 선택해주세요");
+		frm.start_date.focus();
+		return false;
+	}
+	var currentDate = "2017-11-10";
+	if(frm.start_date.value < currentDate) {
+		alert("출발 일자는 신청일 기준 1개월 이후로 선택해주세요");
+		frm.start_date.focus();
+		return false;
+	}
+	if(!trim(frm.end_date.value)) {
+		alert("종료일자를 선택해주세요");
+		frm.end_date.focus();
+		return false;
+	}
+        // 2016.12.27 adan
+ 
+
+	if(!trim(frm.nowStay.value)) {
+		alert("현재 체류 국가를 입력해주세요");
+		frm.nowStay.focus();
+		return false;
+	}
+	if(frm.nationality.value == "0" || frm.nationality.value == "") {
+		alert("국적을 선택해주세요");
+		frm.nationality.focus();
+		return false;
+	}
+	if(frm.category2.value == "0" || frm.category2.value == "" || frm.category1.value == "" || frm.plan.value == "" || frm.premium_won.value == ""  || frm.premium_yi.value == "" ) {
+		alert("가입 상품을 선택바랍니다");
+		frm.category2.focus();
+		return false;
+	}
+	if(frm.frSlc.value == "" || frm.frSlc.value == "0") {
+		alert("가입경로를 선택해주세요");
+		frm.frSlc.focus();
+		return false;
+	}
+	if(frm.goji_1[0].checked == false && frm.goji_1[1].checked == false) {
+		alert("1. 피보험자 질문사항을 선택해주세요");
+		frm.goji_1[0].focus();
+		return false;
+	}
+	if(frm.goji_1[1].checked == true && frm.goji_1_nm.value =="") {
+		alert("질병명을 입력해주세요");
+		frm.goji_1_nm.focus();
+		return false;
+	}
+	if(frm.goji_2[0].checked == false && frm.goji_2[1].checked == false) {
+		alert("2. 피보험자 질문사항을 선택해주세요");
+		frm.goji_2[0].focus();
+		return false;
+	}
+	if(frm.goji_2[1].checked == true && frm.goji_2_nm.value =="") {
+		alert("질병명을 입력해주세요");
+		frm.goji_2_nm.focus();
+		return false;
+	}
+
+	var gojiLen = frm.goji_3.length;
+	var isSlcGoji_3 = false;
+	for(i=0; i<gojiLen; i++) {
+		if(frm.goji_3[i].checked) {
+			isSlcGoji_3 = true;
+		}
+	}
+	if(isSlcGoji_3 == false) {
+		alert("타국적 취득 여부를 선택해주세요");
+		frm.goji_3[0].focus();
+		return false;		
+	}
+
+	if(frm.goji_3[4].checked == true && frm.goji_3_1.value =="") {
+		alert("기타 국적을 입력해주세요");
+		frm.goji_3_1.focus();
+		return false;
+	}
+	if(frm.pay_method[0].checked == false && frm.pay_method[1].checked == false && frm.pay_method[2].checked == false) {
+		alert("결제방법을 선택해주세요");
+		frm.pay_method[0].focus();
+		return false;
+	}
+	if(frm.pay_method[0].checked == true) {
+		if(!trim(frm.depositDate.value)) {
+			alert("입금예정일을 입력바랍니다.");
+			frm.depositDate.focus();
+			return false;
+		}
+		if(!trim(frm.method_1_nm.value)) {
+			alert("입금예정일을 입력바랍니다.");
+			frm.method_1_nm.focus();
+			return false;
+		}
+	}else if(frm.pay_method[1].checked == true) {
+		if(!trim(frm.depositDate.value)) {
+			alert("입금예정일을 입력바랍니다.");
+			frm.depositDate.focus();
+			return false;
+		}
+		if(!trim(frm.method_1_nm.value)) {
+			alert("입금예정일을 입력바랍니다.");
+			frm.method_2_nm.focus();
+			return false;
+		}
+	}else if(frm.pay_method[2].checked == true) {
+		if(frm.card_com.value == "0") {
+			alert('카드사를 선택해주세요');
+			frm.card_com.focus();
+			return false;
+		}
+		if(frm.card_num1.value == "") {
+			alert('카드번호를 입력해주세요');
+			frm.card_num1.focus();
+			return false;
+		}
+		if(frm.card_num1.value.length < "4" || isNaN(trim(frm.card_num1.value)) ) {
+			alert('카드번호를 정확히 입력해주세요');
+			frm.card_num2.value = "";
+			frm.card_num1.focus();
+			return false;
+		}
+		if(frm.card_num2.value == "") {
+			alert('카드번호를 입력해주세요');
+			frm.card_num2.focus();
+			return false;
+		}
+		if(frm.card_num2.value.length < "4" || isNaN(trim(frm.card_num2.value)) ) {
+			alert('카드번호를 정확히 입력해주세요');
+			frm.card_num2.value = "";
+			frm.card_num2.focus();
+			return false;
+		}
+		if(frm.card_num3.value == "") {
+			alert('카드번호를 입력해주세요');
+			frm.card_num3.focus();
+			return false;
+		}
+		if(frm.card_num3.value.length < "4" || isNaN(trim(frm.card_num3.value)) ) {
+			alert('카드번호를 정확히 입력해주세요');
+			frm.card_num3.value = "";
+			frm.card_num3.focus();
+			return false;
+		}
+		if(frm.card_num4.value == "") {
+			alert('카드번호를 입력해주세요');
+			frm.card_num4.focus();
+			return false;
+		}
+		if(frm.card_num4.value.length < "3" || isNaN(trim(frm.card_num4.value)) ) {
+			alert('카드번호를 정확히 입력해주세요');
+			frm.card_num4.value = "";
+			frm.card_num4.focus();
+			return false;
+		}
+		if(frm.card_y.value == "0") {
+			alert('카드 유효기간을 선택해주세요');
+			frm.card_y.focus();
+			return false;
+		}
+		if(frm.card_m.value == "0") {
+			alert('카드 유효기간을 선택해주세요');
+			frm.card_m.focus();
+			return false;
+		}
+		if(frm.cvc.value == "") {
+			alert('cvc번호를 입력해주세요');
+			frm.cvc.focus();
+			return false;
+		}
+		if(frm.card_user.value=="") {
+			alert('카드 소유주명을 입력해주세요');
+			frm.card_user.focus();
+			return false;			
+		}
+	}
+	if(!trim(frm.sign.value)) {
+		if(frm.nosign.checked == false) {
+			alert('작성자 성함을 입력해주세요');
+			frm.sign.focus();
+			return false;
+		}
+	}
+}
+
+
+	function open_popup(id, multi) {
+		window.open('pop_up/'+id+'.html', id, 'width=550, height= 733, resizable=no');
+	}
+
+ 
+
+//-->
+</script>
+</head>
+<body>
+<div class="wrap">
+	<div class="headTitle">출국 후 가입 신청서</div>
+	<div class="notice_1"> - 보험개시이전에 발생된 보험사고는 약관에 의거 보험금 지급이 불가능함을 알려드립니다.</div>
+	<div class="notice_1"> - 보험개시는 가입 요청일로부터 통상 약 1개월이 소요됩니다.</div>
+	<div class="notice_3">여행보험 상품 설명에 대한 계약자 확인</div>
+	<div class="notice_2">* 아래 주요 설명내용을 읽어보시고 동의 여부에 (V) 표시를 해주시기 바랍니다.</div>
+	<form name="msg" method="post" action="http://china.travelover.co.kr/noaccident.php" onsubmit="return chkFrm();">
+		<input type="hidden" name="code" value="SEND">
+	<div id="accordion" class="ui-accordion ui-widget ui-helper-reset" role="tablist">
+		<div class="flip ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-0" aria-controls="ui-accordion-accordion-panel-0" aria-selected="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+			<span class="red">　1 </span>보험회사 및 보험모집자에 대한 정보에 관한 사항 및 보험상품의 보험료납입기간, 보험기간에 대한 보험계약의 개요
+			<span class="chk"><input type="checkbox" required="" name="chk_1"></span>
+		</div>
+		<div class="panel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-0" aria-labelledby="ui-accordion-accordion-header-0" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none; height: 200px;">
+			<p>
+				<iframe src="./agr_1.html"></iframe>
+			</p>
+		</div>
+
+		<div class="flip ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-1" aria-controls="ui-accordion-accordion-panel-1" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+			<span class="red">　2 </span>여행보험 보통약관
+			<span class="chk"><input type="checkbox" required="" name="chk_2"></span>
+		</div>
+		<div class="panel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-1" aria-labelledby="ui-accordion-accordion-header-1" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none; height: 200px;">
+			<p>
+				<iframe src="./agr_2.html"></iframe>
+			</p>
+		</div>
+
+		<div class="flip ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-2" aria-controls="ui-accordion-accordion-panel-2" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+			<span class="red">　3 </span>보험사고처리 기준 주요사항 안내
+			<span class="chk"><input type="checkbox" required="" name="chk_3"></span>
+		</div>
+		<div class="panel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-2" aria-labelledby="ui-accordion-accordion-header-2" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none; height: 200px;">
+			<p>
+				<iframe src="./agr_3.html"></iframe>
+			</p>
+		</div>
+
+		<div class="flip ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-3" aria-controls="ui-accordion-accordion-panel-3" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+			<span class="red">　4 </span>소비자 권익보호에 관한 사항			
+			<span class="chk"><input type="checkbox" required="" name="chk_4"></span>
+		</div>
+		<div class="panel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-3" aria-labelledby="ui-accordion-accordion-header-3" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none; height: 200px;">
+			<p class="agre_txt">1) 최소한의 정보 처리 및 동의거부에 관한 안내</p>
+			<p class="agre_txt">　정보동의 시 계약의 체결 및 이행 목적달성에 부합하는 최소한의 정보만 수집·이용 및 제공하며, 본 동의를 거부하시는 경우에는 보험계약의 체결이 부득이하게 거절되거나, 정상적인 서비스 제공이 불가능할 수 있음을 알려드립니다.</p>
+			<p class="agre_txt">2) 신용등급에 미치는 영향</p>
+			<p class="agre_txt">　본 동의서에 의한 개인(신용)정보 조회는 귀하의 신용등급에 영향을 주지 않습니다.</p>
+		</div>
+
+		<div class="flip ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-4" aria-controls="ui-accordion-accordion-panel-4" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+			<span class="red">　5 </span>개인(신용)정보의 수집·이용에 관한 사항
+			<span class="chk"><input type="checkbox" required="" name="chk_5"></span>
+		</div>
+		<div class="panel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-4" aria-labelledby="ui-accordion-accordion-header-4" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none; height: 200px;">
+			<p>
+				<iframe src="./agr_4.html"></iframe>
+			</p>
+		</div>
+
+		<div class="flip ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-5" aria-controls="ui-accordion-accordion-panel-5" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+			<span class="red">　6 </span>개인(신용)정보의 조회에 관한 사항
+			<span class="chk"><input type="checkbox" required="" name="chk_6"></span>
+		</div>
+		<div class="panel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-5" aria-labelledby="ui-accordion-accordion-header-5" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none; height: 200px;">
+			<p>
+				<iframe src="./agr_5.html"></iframe>
+			</p>
+		</div>
+
+		<div class="flip ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-6" aria-controls="ui-accordion-accordion-panel-6" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+			<span class="red">　7 </span>개인(신용)정보의 제공에 관한 사항
+			<span class="chk"><input type="checkbox" required="" name="chk_7"></span>
+		</div>
+		<div class="panel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-6" aria-labelledby="ui-accordion-accordion-header-6" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none; height: 200px;">
+			<p>
+				<iframe src="./agr_6.html"></iframe>
+			</p>
+		</div>
+
+		<div class="flip ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-7" aria-controls="ui-accordion-accordion-panel-7" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+			<span class="red">　8 </span>민감정보의 및 고유식별정보의 처리에 관한 사항
+			<span class="chk">
+				&nbsp;&nbsp;주민등록번호, 외국인등록번호 처리에 동의<input type="checkbox" required="" name="chk_8_1">
+			</span>
+			<span class="chk">
+				질병·상해정보 처리에 동의<input type="checkbox" required="" name="chk_8">
+			</span>
+
+		</div>
+		<div class="panel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none; height: 200px;" id="ui-accordion-accordion-panel-7" aria-labelledby="ui-accordion-accordion-header-7" role="tabpanel" aria-expanded="false" aria-hidden="true">
+			<p class="agre_txt">당사는 「개인정보보호법」 및 「신용정보의 이용 및 보호에 관한 법률」에 따라 개인(신용)정보에 대한 개별 동의 사항에 대하여</p>
+			<p class="agre_txt">귀하의 민감정보(질병·상해 정보) 및 고유식별정보(주민등록번호, 외국인등록번호)를</p>
+			<p class="agre_txt">처리(수집·이용, 조회, 제공)하고자 합니다. 이에 동의하십니까?</p>
+			
+		</div>
+
+		<div class="flip ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-8" aria-controls="ui-accordion-accordion-panel-8" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+			<span class="red">　9 </span>상품의 소개 등을 위한 개인(신용)정보 처리 동의 (선택 동의)
+			<span class="chk">동의<input type="radio" name="chk_9" value="1"> 동의하지않음<input type="radio" name="chk_9" value="2"></span>
+		</div>
+		<div class="panel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-8" aria-labelledby="ui-accordion-accordion-header-8" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none; height: 200px;">
+			<p>
+				<iframe src="./agr_8.html"></iframe>
+			</p>
+		</div>
+	</div>
+
+					
+	<div class="notice_2">* 표시된 항목은 필수입력사항으로, 미기재시 가입신청이 제한될 수 있습니다.</div>
+		<div class="cont">
+			<div class="title">1. 피보험자 관련 인적사항</div>
+			<div id="underAge">
+					</div><table>
+				<tbody><tr>
+					<th class="border-red">* 성명</th>
+					<td><input type="text" name="name" required=""></td>
+					<th>* 영문성명</th>
+					<td><input type="text" name="eng_name" required=""></td>
+				</tr>
+				<tr>
+					<th>* 주민등록번호</th>
+					<td><input type="text" name="jumin1" size="10" required="" autocomplete="off" onkeyup="j_nex();"> - <input type="text" name="jumin2" size="10" required="" autocomplete="off" onkeyup="j_chk();"> <input type="text" name="age" readonly="readonly" size="3" style="border: 0;"></td>
+					<th>* 본인 휴대폰</th>
+					<td><input type="text" name="cel" required=""></td>
+				</tr>
+				<tr>
+					<th>* E-mail</th>
+					<td><input type="email" name="email" required=""></td>
+					<th>* 기타(비상)연락망</th>
+					<td><input type="text" name="relCel" size="10" required=""> 관계
+							<select name="rel">
+								<option value="0">선택</option>
+								<option value="본인">본인</option>
+								<option value="부">부</option>
+								<option value="모">모</option>
+								<option value="가족">가족</option>
+								<option value="지인">지인</option>
+							</select>
+					</td>
+				</tr>
+				<tr>
+					<th>* 직업</th>
+					<td><input type="text" name="job"></td>
+					<th>* 체류목적</th>
+					<td><input type="text" name="pps"></td>
+				</tr>
+				<tr>
+					<th>* 현지주소</th>
+					<td colspan="3"><input type="text" name="addr" style="width: 93%;"></td>
+				</tr>
+				<tr>
+					<th>*수신(희망)가능 연락처</th>
+					<td>
+						<input type="radio" name="slcCel" value="본인">(1)본인 
+						 <input type="radio" name="slcCel" value="부">(2)부
+						<input type="radio" name="slcCel" value="모">(3)모 
+						<input type="radio" name="slcCel" value="기타">(4)기타 		
+					</td>
+					<th>*통화(희망)가능 한국시간</th>
+					<td><input type="text" name="callDttm" placeholder="통화 후 가입진행 가능"></td>
+				</tr>
+				<tr style="border-top: 2px solid #000;">
+						<th colspan="4">* 미성년자의 경우 아래의 사항 모두 기재하셔야 가입 진행이 가능하오니 반드시 기재바랍니다.</th>
+					</tr>
+					<tr>
+						<th>(부) 성명</th>
+						<td><input type="text" name="dName"></td>
+						<th>(모) 성명</th>
+						<td><input type="text" name="mName"></td>
+					</tr>
+					<tr style="border-bottom: 2px solid #000;">
+						<th>(부) 휴대폰</th>
+						<td><input type="text" name="dCel"></td>
+						<th>(모) 휴대폰</th>
+						<td><input type="text" name="mCel"></td>
+					</tr>
+				
+			</tbody></table>
+		</div>
+		<div class="cont">
+			<div class="title">2. 보험가입 관련사항</div>
+			<table>
+				<tbody><tr>
+					<th>보험 신청 일시</th>
+					<td>2017-10-10 16:10:10</td>
+					<th>* 계약 신청자</th>
+					<td>
+						<input type="text" name="nmApp" size="10" placeholder="신청자 성함">
+						<select name="slcApp">
+							<option value="0">선택</option>
+							<option value="본인">본인</option>
+							<option value="부">부</option>
+							<option value="모">모</option>
+							<option value="가족">가족</option>
+							<option value="지인">지인</option>
+						</select>
+					</td>
+				</tr>
+                <!-- 2016.12.27 adan -->
+				<tr>
+					<th rowspan="2">* 가입기간</th>
+					<td colspan="3" style="border-bottom:none;">
+						<input type="text" name="start_date" id="start_date_cn" placeholder="클릭 후 출발 날짜 선택" autocomplete="off" onchange="clear_this();" class="hasDatepicker">
+							　~　
+						<input type="text" name="end_date" id="end_date_cn" placeholder="클릭 후 종료 날짜 선택" value="" autocomplete="off" onchange="clear_this();" class="hasDatepicker"> (신청일 기준 1개월 이후부터 가입 가능)
+					</td>
+				</tr>
+                <tr>
+                    <td colspan="3" style="border-top:none;padding-top:0px;">
+                    <span style="color:red;">* 해외 현지 보험가입 시 가입기간 1개월 미만은 가입이 불가합니다</span>
+                    </td>
+                </tr>
+				<tr>
+					<th>* 현재 체류 국가</th>
+					<td><input type="text" name="nowStay"></td>
+					<th>* 국적</th>
+					<td>
+							<select name="nationality">
+								<option value="0">선택</option>
+								<option value="한국인">한국인</option>
+								<option value="외국인">외국인</option>
+							</select>
+					</td>
+				</tr>
+				<tr>
+					<th>* 가입상품</th>
+					<td>
+						<select class="txtb" style="WIDTH: 150px" id="category1" name="category1" onchange="selectChange(this, msg.category2, arrItems1, arrItemsGrp1, arr_no);">
+							<option value="0" selected="">가입상품선택</option>
+							<option value="1">해외단기보험</option>
+							<option value="3">장기체류자보험</option>
+						</select>
+
+						<select class="txtb" style="WIDTH: 150px" onchange="appOpen()" id="category2" name="category2">
+							<option value="0" selected="">상품유형선택</option>
+						</select>
+
+						<input type="text" size="15" name="plan" readonly="readonly" required="" autocomplete="off" style="border: 0;">
+						</td>
+					<th>* 가입경로</th>
+					<td>
+						<select name="frSlc">
+							<option value="0">선택</option>
+							<option value="한인회">한인회</option>
+							<option value="북경바자회">북경바자회</option>
+							<option value="한인신문">한인신문</option>
+							<option value="병원팜플렛">병원팜플렛</option>
+							<option value="검색">검색</option>
+							<option value="인터넷까페">인터넷까페</option>
+							<option value="기타">기타</option>
+						</select>
+					</td>
+				</tr>
+			</tbody></table>
+		</div>
+		<div class="cont goji">
+			<div class="title">3. 피보험자 질문사항 및 고지사항</div>
+			<table>
+				<tbody><tr>
+					<td>최근 5년 이내에 수술을 받거나 약을 복용중인 질병이 있으십니까?</td>
+					<td><input type="radio" name="goji_1" value="0">아니오  <input type="radio" name="goji_1" value="1">예 </td>
+					<td><input type="text" name="goji_1_nm"></td>
+				</tr>
+				<tr>
+					<td>최근 3개월 이내에 의사로부터 진찰 또는 검진을 받은 사실이 있습니까?</td>
+					<td><input type="radio" name="goji_2" value="0">아니오  <input type="radio" name="goji_2" value="1">예 </td>
+					<td><input type="text" name="goji_2_nm"></td>
+				</tr>
+				<tr>
+					<td>귀하는 영주권 및 기타 국적을 취득 하였습니까?</td>
+					<td colspan="2">
+						<input type="radio" name="goji_3" value="없음">(1)없음
+						<input type="radio" name="goji_3" value="영주권">(2)영주권
+						<input type="radio" name="goji_3" value="시민권">(3)시민권
+						<input type="radio" name="goji_3" value="이중국적">(4)이중국적
+						<input type="radio" name="goji_3" value="기타">(5)기타
+						<input type="text" name="goji_3_1" size="6">
+
+					</td>
+				</tr>
+
+			</tbody></table>
+		</div>
+		<div class="cont">
+			<div class="title">4. 결제방법<img src="./interest_free_button.png" style="cursor: pointer; margin-left: 50px; height: 23px;" onclick="open_popup(&#39;interest_free_lguplus_smartro&#39;);"></div>
+			<table id="payMode">
+				<tbody><tr>
+					<th>결제방법 선택<!--결제방법 선택<br><img src="/images/interest_free_button.png" style="cursor: pointer; height: 30px; padding-top: 5px; " onclick="open_popup('interest_free_lguplus_smartro');">--></th>
+					<td>
+						<input type="radio" name="pay_method" value="method_1" onclick="slcPayMethod(1);">위엔화 입금 
+						<input type="radio" name="pay_method" value="method_2" onclick="slcPayMethod(2);">원화 입금 
+						<input type="radio" name="pay_method" value="method_3" onclick="slcPayMethod(3);">카드결제
+					</td>
+					<th>보험료</th>
+					<td><p style="text-align: center;">\<input type="text" size="5" name="premium_won" readonly="readonly" required="" autocomplete="off" style="border: 0;"> / 
+						￥<input type="text" size="5" name="premium_yi" readonly="readonly" required="" autocomplete="off" style="border: 0;"></p><p>(위안화 결제 시, 최초 고시 환율 적용)</p></td>
+				</tr>
+
+			</tbody></table>
+		</div>
+		<div class="cont_2">
+			<div class="txt_1">가입을 요청함에 있어, '가입요청시점 이전'에 어떠한 '보험사고'가 없었으므로 아래 내용에 확인 후 가입신청서를 제출 합니다.</div>
+			<div class="txt_1">- 아　래 - </div>
+			<div class="txt_2">1. 위 작성 내용이 사실이며, 만약 상기 내용이 허위로 확인될 시, 관련사고 보상이 제외 될 수 있음을 확인합니다.</div>
+			<div class="txt_2">2. 보험개시 이전 인수심의 기간에 발생되는 보험사고일 경우, 보상이 제외 됨을 확인합니다.</div>
+			<div class="txt_2">3. 보험개시 이전 발생된 사고로 인하여 귀사와 보상여부의 법적 다툼이 있을 경우, 민·형사상의 모든 책임이 상기인 혹은 대리신청인에게 있음을 확인합니다.</div>
+			<div class="txt_2">4. 본 보험가입 상품의 약관 주요내용을 확인했으며, 약관에 동의하였습니다.</div>
+			<div class="txt_3">작성자 가입 본인(대리인) : <input type="text" name="sign"> <input type="checkbox" name="nosign" value="on">서명 생략　　<button type="submit" class="msgBtn">가입 신청</button></div>
+
+			<div class="txt_1"><img src="./logo(1).png"></div>
+		</div>
+
+	</form>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var arrItems1 = new Array();
+var arrItemsGrp1 = new Array();
+var arr_no = new Array();
+
+arrItems1[425] = '0~14세 해외여행';
+arrItemsGrp1[425] = 1;
+arr_no[0] = 425;
+arrItems1[426] = '15~30세 해외여행';
+arrItemsGrp1[426] = 1;
+arr_no[1] = 426;
+arrItems1[427] = '31~45세 해외여행';
+arrItemsGrp1[427] = 1;
+arr_no[2] = 427;
+arrItems1[428] = '46~69세 해외여행';
+arrItemsGrp1[428] = 1;
+arr_no[3] = 428;
+arrItems1[429] = '70~80세 해외여행';
+arrItemsGrp1[429] = 1;
+arr_no[4] = 429;
+arrItems1[430] = '81~90세 해외여행';
+arrItemsGrp1[430] = 1;
+arr_no[5] = 430;
+arrItems1[756] = '0~1세 장기체류보험';
+arrItemsGrp1[756] = 3;
+arr_no[6] = 756;
+arrItems1[757] = '2~5세 장기체류보험';
+arrItemsGrp1[757] = 3;
+arr_no[7] = 757;
+arrItems1[758] = '6~10세 장기체류보험';
+arrItemsGrp1[758] = 3;
+arr_no[8] = 758;
+arrItems1[759] = '11~14세 장기체류보험';
+arrItemsGrp1[759] = 3;
+arr_no[9] = 759;
+arrItems1[760] = '15~20세 장기체류보험';
+arrItemsGrp1[760] = 3;
+arr_no[10] = 760;
+arrItems1[761] = '21~25세 장기체류보험';
+arrItemsGrp1[761] = 3;
+arr_no[11] = 761;
+arrItems1[762] = '26~30세 장기체류보험';
+arrItemsGrp1[762] = 3;
+arr_no[12] = 762;
+arrItems1[763] = '31~35세 장기체류보험';
+arrItemsGrp1[763] = 3;
+arr_no[13] = 763;
+arrItems1[764] = '36~40세 장기체류보험';
+arrItemsGrp1[764] = 3;
+arr_no[14] = 764;
+arrItems1[765] = '41~45세 장기체류보험';
+arrItemsGrp1[765] = 3;
+arr_no[15] = 765;
+arrItems1[766] = '46~50세 장기체류보험';
+arrItemsGrp1[766] = 3;
+arr_no[16] = 766;
+arrItems1[767] = '51~55세 장기체류보험';
+arrItemsGrp1[767] = 3;
+arr_no[17] = 767;
+arrItems1[768] = '56~60세 장기체류보험';
+arrItemsGrp1[768] = 3;
+arr_no[18] = 768;
+arrItems1[769] = '61~65세 장기체류보험';
+arrItemsGrp1[769] = 3;
+arr_no[19] = 769;
+
+function selectChange(control, controlToPopulate, ItemArray, GroupArray, arr_no)
+{
+//selectChange(this, email_frm.category2, arrItems1, arrItemsGrp1);
+//control : 가입상품선택 ( category1 )
+  var myEle ;
+  for (var q=controlToPopulate.options.length;q>=0;q--) controlToPopulate.options[q]=null;
+  myEle = document.createElement("option") ;
+  myEle.value = '0' ;
+  myEle.text = "[상품유형선택]" ;
+  controlToPopulate.add(myEle) ;
+  if(control.value != "0") {
+	for(var q = 0; q< arr_no.length; q++) {
+		var arr_idx = arr_no[q];
+		var GroupArr = GroupArray[arr_idx];
+			if (GroupArr == control.value) {
+				myEle = document.createElement("option");
+				myEle.value = arr_idx;
+				myEle.text = ItemArray[arr_idx];
+				controlToPopulate.add(myEle) ;
+			}
+		}
+	}
+}
+
+function clear_this() {
+	var f = document.msg;
+	var controlToPopulate = f.category2;
+	f.category1.value = "0";
+	f.plan.value = "";
+ 
+  var myEle ;
+  var x ;
+  for (var q=controlToPopulate.options.length;q>=0;q--) controlToPopulate.options[q]=null;
+  myEle = document.createElement("option") ;
+  myEle.value = '0' ;
+  myEle.text = "[상품유형선택]" ;
+  controlToPopulate.add(myEle) ;
+}
+
+
+
+//-->
+</script><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="font-size: 13px;"></div></body></html>
