@@ -1,1 +1,30 @@
 .logo{color:#1d1d48 !important; }
+
+.askBox {/*display:none;*/ width:100%; height: auto; margin:30px 0px 50px 0px;}
+.stepBox-left, .stepBox-right {float:left; width:50%; height:200px; text-align: center;}
+.stepBox{ width:150px; height:50px; border: 1px solid #fff; margin:0 auto; }
+.stepBox h3{font-size:16px; text-align: left; padding: 5%; }
+.stepBox-content {margin-top:30px; }
+.stepBox-content li{ width:200px; text-align: left; margin:0 auto;}
+.container a.btn-title{margin:20px auto;}
+.stepBox-info{display:block; width:100%; height:50px; text-align: center;margin-top:-30px}
+#basicCondition ol {width:80%; margin:0 auto;}
+
+#basicCondition ol li{float:left; width:40%; margin-left:5%; margin-bottom: 5px;height: 40px; border:1px solid #999; list-style: none; padding:5px;  line-height:30px}
+
+
+
+/*dowell-health*/
+#dowell_health .health {float:left; width:30%; margin-right:5%; height: 150px; padding:20px; box-sizing: border-box; text-align: center; margin-top: 30px;;}
+#dowell_health .health:last-child{margin-right:0px;}
+#dowell_health .health h4{font-size:18px; font-weight:bold; margin-bottom: 20px;}
+#dowell_health .health a{display: block; max-width:180px; width:100%; margin:0 auto;}
+#dowell_health .health img{width: 100%;}
+
+[class*=row0]{margin:30px;}
+#dowell_health .card{width:100%; padding:20px;}
+#dowell_health .card p{ width:100%; }
+#dowell_health .title {margin:50px 0;}
+#dowell_health .row02 {max-width:900px; width:100%; margin:0 auto;}
+#dowell_health .row02 img{width:100%; }
+.section-heading{margin-top:60px !important;}
