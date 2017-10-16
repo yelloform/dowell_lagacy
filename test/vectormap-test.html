@@ -18,6 +18,2650 @@
     <div id="jvm-hospital" class="jvectormap" style="width:500px; height: 500px;">
     </div>
 </div>
+
+<!-- 협약병원 -->
+<div id="allHospital" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">
+                    협약병원 목록
+                </h4>
+            </div>
+            <div class="modal-body no-padding">
+                <table class="table table-bordered table-striped table-condensed" style="font-size: 8pt; ">
+                    <tbody><tr>
+                        <th colspan="3" class="col-xs-1">도시</th>
+                        <th class="col-xs-3">병원명</th>
+                        <th class="col-xs-3">위치</th>
+                        <th class="col-xs-2">운영시간</th>
+                        <th class="col-xs-2">전화번호</th>
+                        <th class="col-xs-1">한국어상담</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="18" class="active">북경</th>
+                        <th colspan="2" rowspan="18" class="active">북경</th>
+                        <td>北京???院(북경케어병원)</td>
+                        <td>望京湖光中街8?</td>
+                        <td>월~토 8:30~17:30</td>
+                        <td>(010)6338-8080</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>北京新世????院<br>(북경신세기부녀아동병원)</td>
+                        <td>望京北路51?院</td>
+                        <td>월~일 08:00~21:00<br>(읍급실 21:00~08:00)</td>
+                        <td>(010)5178-3366</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>北京??英智眼科?院<br>(북경아이얼안과병원)</td>
+                        <td>潘家?大厦5?</td>
+                        <td>월~일 08:00~16:30</td>
+                        <td>(010)6771-5558+교환번호615</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>基恩?院(기은병원)</td>
+                        <td>望京博泰??B座T-3?</td>
+                        <td>월~토 09:00~18:00</td>
+                        <td>(010)8478-0801</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>北京????中心(북경국제의료중심)</td>
+                        <td>亮??路50?北京燕莎中心?字?C-511</td>
+                        <td>월~일 08:0~20:00</td>
+                        <td>(010)8448-4585+교환번호8030</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>北京?源中??所(북경동문중의원)</td>
+                        <td>宵元里8?106室</td>
+                        <td>월~금 09:00~17:30<br>토~일 09:00~20:00</td>
+                        <td>186-1821-9871</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <!--  2017.2.27 adan, 김이사님,  산얼병원 제외
+                    <tr>
+                      <td>善??院(산얼병원)</td>
+                      <td>望京西?四?412?</td>
+                      <td>월~일 08:30~17:30<br>월~일(내과)<br>08:30~20:30</td>
+                      <td>(010)6475-9911</td>
+                      <td class="text-center">O</td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td>普?????(푸화국제의원)</td>
+                        <td>?3?武?北路54?</td>
+                        <td>월~금 8:30~17:30<br>(응급실 24시간)</td>
+                        <td>(010)5245-2586</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>北京天?普??院&amp;??<br>(북경티엔탄푸화병원)</td>
+                        <td>?城?天?南里12?</td>
+                        <td>월~금 8:30~17:30<br>(응급실 24시간)</td>
+                        <td>(010)6702-0836</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>精?博?康??院(강복병원)</td>
+                        <td>朝??南?路188?</td>
+                        <td>월~금 08:00~17:00<br>(응급실 24시간)</td>
+                        <td>400-8687-999</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <td>天使???院-望京分院(천사병원-왕징)</td>
+                        <td>北京望京西?1?117#</td>
+                        <td>월~일 08:00~20:00</td>
+                        <td>(010)8471-0866</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <td>天使???院-回??分院<br>(천사병원-회룡관)</td>
+                        <td>回??西大街?局???雅?3?</td>
+                        <td></td>
+                        <td>(010)8493-7070</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <td>天使???院-北苑分院<br>(천사병원-북원)</td>
+                        <td>朝?????南路天??1??</td>
+                        <td></td>
+                        <td>(010)8171-2418</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <td>Global Doctor(medical office)<br>(글로벌닥터medical office)</td>
+                        <td>百子?南二路88?</td>
+                        <td>24시 진료 (연중 무휴)</td>
+                        <td>(010)5815-1188</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <td>卓正??-CBD??中心<br>(탁정의료-CBD의료중심)</td>
+                        <td>朝??光?路5?院世??富中心</td>
+                        <td>월~일 08:30~17:30</td>
+                        <td>(010)8587-6680</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <td>卓正??-CBD?童保健中心<br>(탁정의료-CBD아동병원)</td>
+                        <td>朝??光?路5?院世??富中心</td>
+                        <td>월~일 08:30~17:30</td>
+                        <td>(010)8587-6690</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <td>Vista Medical Center(?世??所)<br>(비스타메디컬센터)</td>
+                        <td>嘉里中心商?三?</td>
+                        <td>월~일 07:00~21:00<br>(24시간 medical hotline)</td>
+                        <td>(010)8529-6618</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>孔?堂(공의당)</td>
+                        <td>朝????南大街南口21?住皇城2?</td>
+                        <td>월~일 8:30-17:30</td>
+                        <td>(010)6478-9888</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>北京明德?院(오아시스)</td>
+                        <td>朝??酒仙?北路9?</td>
+                        <td>월~일 8:30-17:30<br>(24시간 응급실)</td>
+                        <td>(010)5985-0462</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="10" class="active">상해</th>
+                        <th colspan="2" rowspan="10" class="active">상해</th>
+                        <td>上海瑞??院(상해루이똥병원)</td>
+                        <td>浦?新????路120?</td>
+                        <td>월~일 08:00~20:30<br>(응급실 24시간)</td>
+                        <td>(021)5833-9595</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>?行?中??院(민항구중의원)</td>
+                        <td>?行?合川路3071?</td>
+                        <td>월~일 08:00~17:00<br>(응급실 24시간)</td>
+                        <td>(021)5187-6888</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>上海同仁?院(상해동인병원)</td>
+                        <td>???仙霞路1111?</td>
+                        <td>월~토 8:00~17:00</td>
+                        <td>(021)5203-9999*71612(오전)/72431(오후)</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>上海??眼科?院(상해아이얼안과병원)</td>
+                        <td>???虹?路1286?（近宋?路）</td>
+                        <td>월~일 08:00~17:00</td>
+                        <td>(021)3251-9930</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>上海德欣???(Dearsunday)</td>
+                        <td>上海市?行?虹梅路3168?</td>
+                        <td>월~일 09:00~17:00</td>
+                        <td>180-1631-9469</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>上海光??院(상해광택병원)</td>
+                        <td>上海市?行??松路156?</td>
+                        <td>월~금 09:00~19:00<br>토요일 : 09:00~17:00</td>
+                        <td>159-0096-5225</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>上海仁??院(상해인애병원)</td>
+                        <td>上海市徐??漕溪路133?</td>
+                        <td>월~일 08:00~17:00</td>
+                        <td>130-4063-5888</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>上海?嘉?合??部(상해성가병원)</td>
+                        <td>上海?行?虹莘路3079?近漕?路口</td>
+                        <td>월~토 09:00~17:00</td>
+                        <td>135-2412-4477133-7000-0441</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>民航上海?院（민항상해병원)</td>
+                        <td>上海市?????石路398?</td>
+                        <td>월~금 8:00~17:00</td>
+                        <td>132-6255-2161</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>上海百佳???院(상해백가심산부병원)</td>
+                        <td>上海市?行?虹梅路1045?</td>
+                        <td>월~일 8:30~17:00</td>
+                        <td>180-1759-781767285099</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <th class="active">절강</th>
+                        <th colspan="2" class="active">항주</th>
+                        <td>浙江?城?院(절강녹성병원)</td>
+                        <td>杭州市 西湖? 古墩路409?</td>
+                        <td>월~일 08:00~17:00</td>
+                        <td>(0571)8821-3830</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2" class="active">천진</th>
+                        <th colspan="2" rowspan="2" class="active">천진</th>
+                        <td>天津泰?普??院(천진푸화병원)</td>
+                        <td>技????第三大街61?</td>
+                        <td>월~일 08:30~16:30</td>
+                        <td>(022)6520-8489</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>天津津?中??院(천진진문중의병원)</td>
+                        <td>河西?黑牛城道189?</td>
+                        <td>월~일 08:00~17:00</td>
+                        <td>150-2210-7718183-0224-0783</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <th class="active">중경</th>
+                        <th colspan="2" class="active">중경</th>
+                        <td>Global Doctor(글로벌닥터)</td>
+                        <td>?中?中山三路139?</td>
+                        <td>월~금 08:00~18:00<br>(24시 응급실)</td>
+                        <td>(023)8903-8837</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="16" class="active">광동</th>
+                        <th colspan="2" rowspan="6" class="active">광주</th>
+                        <td>SY信永????中心(SY신영국제의료중심)</td>
+                        <td>珠光新城?强路富力盈力大厦北塔3A</td>
+                        <td>월~금 10:00~19:00<br>토10:00~17:00</td>
+                        <td>(020)3801-2030</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>卓正??-珠江新城??中心<br>(탁정의료-주쟝신청의료중심)</td>
+                        <td>天河??夏路16?富力盈?大厦</td>
+                        <td>월~일 08:30~17:30</td>
+                        <td>(020)3809-9090</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <td>卓正??-淘金??中心<br>(탁정의료-타오진의료중심)</td>
+                        <td>越秀?建?六?路33?宜安??</td>
+                        <td>월~일 08:30~17:30</td>
+                        <td>(020)8363-4080</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <td>卓正??-淘金?保中心<br>(탁정의료-타오진아동보건병원)</td>
+                        <td>越秀?建?六?路33?宜安??</td>
+                        <td>월~일 08:30~17:30</td>
+                        <td>(020)8363-4082</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <td>?州伊?莎白???院<br>（광주이리샤바이산부인과병원)</td>
+                        <td>???康王中路484?<br>（地?1???家祠站C出口）</td>
+                        <td>월~일 08:30~17:30<br>(24시간 응급실)</td>
+                        <td>400-886-9268189-3398-1688</td>
+                        <td class="text-center">O<br>提前??）</td>
+                    </tr>
+                    <tr>
+                        <td>Global Doctor(글로벌닥터)</td>
+                        <td>?河中路天?花?136? D?</td>
+                        <td>월~토 09:00~21:00<br>일요일 09:00~18:00<br>(24시간 응급실)</td>
+                        <td>(020)3890-6699</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" rowspan="9" class="active">심천</th>
+                        <td>회전중심의원(?展??中心)</td>
+                        <td>福田?金田路?福?三路交??</td>
+                        <td>월~일 08:30~17:30</td>
+                        <td>(010)8826-1295</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>회전아동보건중심(?展?童保健中心)</td>
+                        <td>福田?金田路?福?三路交??</td>
+                        <td>월~토 08:30~17:30</td>
+                        <td>(010)8826-1295</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>卓正??-海岸城??中心<br>(탁정의료-하이안청의료중심)</td>
+                        <td>南山?天利中央商???</td>
+                        <td>월~일 08:30~17:30</td>
+                        <td>(010)8826-1295</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>卓正??-海岸城?童?科及正畸中心<br>(탁정의료-하이안청아동치과&amp;정형병원)</td>
+                        <td>南山?天利中央商???</td>
+                        <td>월~일 08:30~17:30</td>
+                        <td>(010)8826-1295</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>卓正??-蛇口??中心<br>(탁정의료-서코우의료중심)</td>
+                        <td>南山?南海大道和工?四路交??万融大厦</td>
+                        <td>월~일 08:30~17:30</td>
+                        <td>(010)8826-1295</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>卓正??-蛇口??及日?手?中心<br>(탁정의료-서코우신체검사&amp;수술병원)</td>
+                        <td>南山?南海大道和工?四路交??万融大厦</td>
+                        <td>월~일 08:30~17:30</td>
+                        <td>(010)8826-1295</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>卓正??-蛇口?童保健中心<br>(탁정의료-서코우아동보건중심)</td>
+                        <td>南山?南海大道和工?四路交??万融大厦</td>
+                        <td>월~일 08:30~17:30</td>
+                        <td>(010)8826-1295</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>VISTA-Sk international Medical Center<br> (?世???????中心)(비스타SK병원)</td>
+                        <td>??省深?市南山?科?路?件??基地4?C座</td>
+                        <td>월~일 09:00~21:00</td>
+                        <td>(0755)3689-9833</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>深?和美???院<br>(심천화미부녀아동병원)</td>
+                        <td>深?市南山?深南大道120 18?</td>
+                        <td>월~일 08:00-20:00</td>
+                        <td>(0755)3391-9133*1333</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="active">동관</th>
+                        <td>Global Doctor(글로벌닥터)</td>
+                        <td>?城?路星河??新天地28??</td>
+                        <td>월~토 09:00~18:00<br>(24시 응급실)</td>
+                        <td>(0769)2203-0011</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2" class="active">강소</th>
+                        <th colspan="2" class="active">남경</th>
+                        <td>Global Doctor(글로벌닥터)</td>
+                        <td>莫愁湖?路6?</td>
+                        <td>월~토 09:00~18:30<br>(24시 응급실)</td>
+                        <td>(025)8651-8600</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="active">우시</th>
+                        <td>无?新??凰?院(무석봉황병원)</td>
+                        <td>无?市?江北路20?</td>
+                        <td>월~금 09:00~17:00<br>토요일 09:00~12:00<br>(24시 응급실)</td>
+                        <td>(0510)8525-9149</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <th class="active">연변</th>
+                        <th colspan="2" class="active">연길</th>
+                        <td>延?中??院（연변중의병원)</td>
+                        <td>延吉市??街606?</td>
+                        <td>월~일:8:00~16:30</td>
+                        <td>0433-2912 328</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="4" class="active">요녕</th>
+                        <th colspan="2" rowspan="2" class="active">심양</th>
+                        <td>沈?美德因???院<br>（심양미덕인부여병원）</td>
+                        <td>沈?市皇姑?泰山路15?(北陵公?正?)</td>
+                        <td>월~일:8:00~17:00</td>
+                        <td>186-4005-2370</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>Global Doctor(글로벌닥터)</td>
+                        <td>大??平江街54?</td>
+                        <td>월~금 08:30~16:30<br>(24시 응급실)</td>
+                        <td>(024)2433-0678</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" rowspan="2" class="active">대련</th>
+                        <td>大?百佳???院(대련백가심산부병원)</td>
+                        <td>西???利路98?</td>
+                        <td>월-일 08:00~17:00</td>
+                        <td>(0411)8688-7777</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>和平??(평화의원)</td>
+                        <td>???金?路 富邦??</td>
+                        <td>월-일 07:00~21:00</td>
+                        <td>(0411)8761-5500</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="5" class="active">산동</th>
+                        <th colspan="2" rowspan="2" class="active">청도</th>
+                        <td>JFC CLINIC(JFC???院)<br>(JFC 국제병원)</td>
+                        <td>城??城?街道后桃林社?36?</td>
+                        <td>월~금 08:00~17:30</td>
+                        <td>(0532)6776-7582</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>城?金?桐可?安?合??部<br>(커리안병원)</td>
+                        <td>?河立交?左??流亭</td>
+                        <td>월~토 08:00~17:00</td>
+                        <td>186-7896-3322185-6172-2933</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" rowspan="2" class="active">연태</th>
+                        <td>?康?所(명광의원)</td>
+                        <td>?山?桐林路83?</td>
+                        <td>월~금 07:00~18:00</td>
+                        <td>155-5356-5761</td>
+                        <td class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>烟台??技?????院<br>(연태경제기술개발구병원)</td>
+                        <td>??技????泰山路11?</td>
+                        <td>24시 진료 (연중 무휴)</td>
+                        <td>(053)5638-7840</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="active">위해</th>
+                        <td>威海市??技?????院<br>(위해경제기술개발구병원)</td>
+                        <td>??大道80?</td>
+                        <td>월~금 08:30~17:30</td>
+                        <td>187-6310-3168</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <th class="active">호북</th>
+                        <th colspan="2" class="active">무한</th>
+                        <td>Global Doctor(글로벌닥터)</td>
+                        <td>武昌???路241? ?仁地??院</td>
+                        <td>월~토 09:00~18:00<br>(24시 응급실)</td>
+                        <td>(027)8765-6685</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    <tr>
+                        <th class="active">사천</th>
+                        <th colspan="2" class="active">성도</th>
+                        <td>Global Doctor(글로벌닥터)</td>
+                        <td>科?北路62? 力?大厦</td>
+                        <td>월~금 09:00~18:00<br>토요일 : 09:00~12:00<br>(24시 응급실)</td>
+                        <td>(028)8528-3660</td>
+                        <td class="text-center">X</td>
+                    </tr>
+                    </tbody></table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div id="CN-11" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">
+                    북경
+                </h4>
+            </div>
+            <div class="modal-body no-padding">
+                <table class="table table-bordered hospital">
+                    <tbody><tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="2" rowspan="2">도시</th>
+                        <th colspan="8" rowspan="2">
+                            병원명<br> (한 : 한국어가능 / 응 : 응급의료센터)
+                        </th>
+                        <th colspan="5" rowspan="2">진료시간</th>
+                        <th colspan="14">전화번호</th>
+                        <th rowspan="2">
+                            내<br> 과
+                        </th>
+                        <th rowspan="2">
+                            외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            산<br> 부<br> 인<br> 과
+                        </th>
+                        <th rowspan="2">
+                            소<br> 아<br> 과
+                        </th>
+                        <th rowspan="2">
+                            치<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 신<br> 건<br> 강<br>
+                        </th>
+                        <th rowspan="2">
+                            영<br> 상<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            마<br> 취<br> 통<br> 증
+                        </th>
+                        <th rowspan="2">
+                            건<br> 강<br> 관<br> 리
+                        </th>
+                        <th rowspan="2">
+                            진<br> 단<br> 검<br> 사
+                        </th>
+                        <th rowspan="2">
+                            응<br> 급<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            안<br> 과
+                        </th>
+                        <th rowspan="2">
+                            이<br> 비<br> 인<br> 후
+                        </th>
+                        <th rowspan="2">
+                            피<br> 부<br> 과
+                        </th>
+                        <th rowspan="2">
+                            성<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            비<br> 뇨<br> 기<br> 과
+                        </th>
+                        <th rowspan="2">
+                            심<br> 혈<br> 관<br> 과
+                        </th>
+                        <th rowspan="2">
+                            중<br> 의<br> 과
+                        </th>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="14">주소</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="24">북경</td>
+                        <td>한</td>
+                        <td colspan="7">케어병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">(010) 63388080</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">
+                            北京<font>?</font><font>?</font><font>?</font><font>院</font>
+                        </td>
+                        <td>토</td>
+                        <td></td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">朝??望京湖光中街8?2?</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td>한</td>
+                        <td colspan="7">한미국제병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">09:30~18:00</td>
+                        <td colspan="14">(010) 84726690</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td></td>
+                        <td colspan="7">?美???院</td>
+                        <td>토</td>
+                        <td></td>
+                        <td colspan="3">09:30~13:00</td>
+                        <td colspan="14">朝??望京西?2?222??星源??公寓B座3?</td>
+                    </tr>
+                    <tr>
+                        <td>한</td>
+                        <td colspan="7">신세기부녀아동병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:00~21:00</td>
+                        <td colspan="14">(010) 51783366</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>응</td>
+                        <td colspan="7">北京新世????院</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">08:00~21:00</td>
+                        <td colspan="14">朝??望京北路51?院</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td>한</td>
+                        <td colspan="7">아이얼안과병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:00~16:30</td>
+                        <td colspan="14">(010) 87789662</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td></td>
+                        <td colspan="7">北京??英智眼科?院</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">08:00~16:30</td>
+                        <td colspan="14">朝??潘家?南里12?潘家?大厦5?</td>
+                    </tr>
+                    <tr>
+                        <td>한</td>
+                        <td colspan="7">기은병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">09:00~18:00</td>
+                        <td colspan="14">(010) 84780801</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">基恩?院</td>
+                        <td>토</td>
+                        <td></td>
+                        <td colspan="3">09:00~18:00</td>
+                        <td colspan="14">朝??望京博泰??B座T-3?</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td></td>
+                        <td colspan="7">북경국제의료센터</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">09:00~17:00</td>
+                        <td colspan="14">(010) 84484585</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td></td>
+                        <td colspan="7">北京???院中心</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">09:00~17:00</td>
+                        <td colspan="14">朝??亮??路50?北京燕莎中心?字?C-511</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">동문중의원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">09:00~17:30</td>
+                        <td colspan="14">18618219871</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">北京?源中??所</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">09:00~20:00</td>
+                        <td colspan="14">宵元里8?106室</td>
+                    </tr>
+                    <!-- 2017.2.27 adan, 김이사님,  산얼병원 제외
+                    <tr>
+                        <td>한</td>
+                        <td colspan="7">산얼병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">(010) 56296768</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">善??院</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">朝??望京西?四?412?</td>
+                    </tr>
+                    -->
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td>한</td>
+                        <td colspan="7">푸화병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">(010) 52452586</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td>응</td>
+                        <td colspan="7">普?????</td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="3" class="text-center">X</td>
+                        <td colspan="14">?3?武?北路54?</td>
+                    </tr>
+                    <tr>
+                        <td>한</td>
+                        <td colspan="7">티엔탄 푸화병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">(010) 67020836</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>응</td>
+                        <td colspan="7">北京天?普??院&amp;??</td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="3" class="text-center">X</td>
+                        <td colspan="14">?城?天?南里12?</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td>한</td>
+                        <td colspan="7">강복병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:00~17:00</td>
+                        <td colspan="14">(010) 400 8687 99</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td>응</td>
+                        <td colspan="7">精?博?康??院</td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="3" class="text-center">X</td>
+                        <td colspan="14">朝??南?路188?</td>
+                    </tr>
+                    <tr>
+                        <td>한</td>
+                        <td colspan="7">Global Doctor</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">365일 24시간</td>
+                        <td colspan="14">(010) 58151188</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">?球?生</td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="3" class="text-center">X</td>
+                        <td colspan="14">朝??百子?南二路88?8?808室</td>
+                    </tr>
+                    </tbody></table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div id="CN-31" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">
+                    협약병원 목록
+                </h4>
+            </div>
+            <div class="modal-body no-padding">
+                <table class="table table-bordered hospital">
+                    <tbody><tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="2" rowspan="2">도시</th>
+                        <th colspan="8" rowspan="2">
+                            병원명<br> (한 : 한국어가능 / 응 : 응급의료센터)
+                        </th>
+                        <th colspan="5" rowspan="2">진료시간</th>
+                        <th colspan="14">전화번호</th>
+                        <th rowspan="2">
+                            내<br> 과
+                        </th>
+                        <th rowspan="2">
+                            외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            산<br> 부<br> 인<br> 과
+                        </th>
+                        <th rowspan="2">
+                            소<br> 아<br> 과
+                        </th>
+                        <th rowspan="2">
+                            치<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 신<br> 건<br> 강<br>
+                        </th>
+                        <th rowspan="2">
+                            영<br> 상<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            마<br> 취<br> 통<br> 증
+                        </th>
+                        <th rowspan="2">
+                            건<br> 강<br> 관<br> 리
+                        </th>
+                        <th rowspan="2">
+                            진<br> 단<br> 검<br> 사
+                        </th>
+                        <th rowspan="2">
+                            응<br> 급<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            안<br> 과
+                        </th>
+                        <th rowspan="2">
+                            이<br> 비<br> 인<br> 후
+                        </th>
+                        <th rowspan="2">
+                            피<br> 부<br> 과
+                        </th>
+                        <th rowspan="2">
+                            성<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            비<br> 뇨<br> 기<br> 과
+                        </th>
+                        <th rowspan="2">
+                            심<br> 혈<br> 관<br> 과
+                        </th>
+                        <th rowspan="2">
+                            중<br> 의<br> 과
+                        </th>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="14">주소</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="8">상해</td>
+                        <td>한</td>
+                        <td colspan="7">루이똥병원(서동)</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:00~20:30</td>
+                        <td colspan="14">(021) 58339595</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>응</td>
+                        <td colspan="7">
+                            上海瑞<font>??</font><font>院</font>
+                        </td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">08:00~20:30</td>
+                        <td colspan="14">浦?新????路120?</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td>한</td>
+                        <td colspan="7">민항구중의원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:00~17:00</td>
+                        <td colspan="14">(021) 51173569</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td>응</td>
+                        <td colspan="7">?行?中??院</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">08:00~17:00</td>
+                        <td colspan="14">?行?合川路3071?</td>
+                    </tr>
+                    <tr>
+                        <td>한</td>
+                        <td colspan="7">교통대부속 동인병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:00~17:00</td>
+                        <td colspan="14">(021) 6290 1494</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">上海同仁?院</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">08:00~17:00</td>
+                        <td colspan="14">??仙霞路1111?同仁?院6?D???部，近?溪路</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td>한</td>
+                        <td colspan="7">푸화병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:30~17:00</td>
+                        <td colspan="14">(022) 65208489</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td></td>
+                        <td colspan="7">天津泰?普??院</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">08:30~17:00</td>
+                        <td colspan="14">天津市技????第三大街61?&nbsp;</td>
+                    </tr>
+                    </tbody></table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div id="CN-50" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">
+                    협약병원 목록
+                </h4>
+            </div>
+            <div class="modal-body no-padding">
+                <table class="table table-bordered hospital">
+                    <tbody><tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="2" rowspan="2">도시</th>
+                        <th colspan="8" rowspan="2">
+                            병원명<br> (한 : 한국어가능 / 응 : 응급의료센터)
+                        </th>
+                        <th colspan="5" rowspan="2">진료시간</th>
+                        <th colspan="14">전화번호</th>
+                        <th rowspan="2">
+                            내<br> 과
+                        </th>
+                        <th rowspan="2">
+                            외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            산<br> 부<br> 인<br> 과
+                        </th>
+                        <th rowspan="2">
+                            소<br> 아<br> 과
+                        </th>
+                        <th rowspan="2">
+                            치<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 신<br> 건<br> 강<br>
+                        </th>
+                        <th rowspan="2">
+                            영<br> 상<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            마<br> 취<br> 통<br> 증
+                        </th>
+                        <th rowspan="2">
+                            건<br> 강<br> 관<br> 리
+                        </th>
+                        <th rowspan="2">
+                            진<br> 단<br> 검<br> 사
+                        </th>
+                        <th rowspan="2">
+                            응<br> 급<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            안<br> 과
+                        </th>
+                        <th rowspan="2">
+                            이<br> 비<br> 인<br> 후
+                        </th>
+                        <th rowspan="2">
+                            피<br> 부<br> 과
+                        </th>
+                        <th rowspan="2">
+                            성<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            비<br> 뇨<br> 기<br> 과
+                        </th>
+                        <th rowspan="2">
+                            심<br> 혈<br> 관<br> 과
+                        </th>
+                        <th rowspan="2">
+                            중<br> 의<br> 과
+                        </th>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="14">주소</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="2">중경</td>
+                        <td></td>
+                        <td colspan="7">Global Doctor</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:00~18:00</td>
+                        <td colspan="14">(023) 89038837</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>응</td>
+                        <td colspan="7">?球?生</td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="3" class="text-center">X</td>
+                        <td colspan="14">No. 139, Zhong Shan San Lu, Yuzhong District, Chongqing</td>
+                    </tr>
+                    </tbody></table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div id="CN-44" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">
+                    협약병원 목록
+                </h4>
+            </div>
+            <div class="modal-body no-padding">
+                <table class="table table-bordered hospital">
+                    <tbody><tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="2" rowspan="2">도시</th>
+                        <th colspan="8" rowspan="2">
+                            병원명<br> (한 : 한국어가능 / 응 : 응급의료센터)
+                        </th>
+                        <th colspan="5" rowspan="2">진료시간</th>
+                        <th colspan="14">전화번호</th>
+                        <th rowspan="2">
+                            내<br> 과
+                        </th>
+                        <th rowspan="2">
+                            외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            산<br> 부<br> 인<br> 과
+                        </th>
+                        <th rowspan="2">
+                            소<br> 아<br> 과
+                        </th>
+                        <th rowspan="2">
+                            치<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 신<br> 건<br> 강<br>
+                        </th>
+                        <th rowspan="2">
+                            영<br> 상<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            마<br> 취<br> 통<br> 증
+                        </th>
+                        <th rowspan="2">
+                            건<br> 강<br> 관<br> 리
+                        </th>
+                        <th rowspan="2">
+                            진<br> 단<br> 검<br> 사
+                        </th>
+                        <th rowspan="2">
+                            응<br> 급<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            안<br> 과
+                        </th>
+                        <th rowspan="2">
+                            이<br> 비<br> 인<br> 후
+                        </th>
+                        <th rowspan="2">
+                            피<br> 부<br> 과
+                        </th>
+                        <th rowspan="2">
+                            성<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            비<br> 뇨<br> 기<br> 과
+                        </th>
+                        <th rowspan="2">
+                            심<br> 혈<br> 관<br> 과
+                        </th>
+                        <th rowspan="2">
+                            중<br> 의<br> 과
+                        </th>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="14">주소</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="6">광주</td>
+                        <td></td>
+                        <td colspan="7">쭈쟝신청 의료센터</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">020）3809 9090</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">珠江新城??中心</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">?州市天河??夏路富力盈?大厦 1205?1207?元&nbsp;</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td>한</td>
+                        <td colspan="7">신영국제종합병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">10:00~19:00</td>
+                        <td colspan="14">(020) 38012030</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td></td>
+                        <td colspan="7">SY信永????中心</td>
+                        <td>토</td>
+                        <td></td>
+                        <td colspan="3">10:00~17:00</td>
+                        <td colspan="14">?州市珠光新城?强路富力盈力大厦北塔3A</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">Global Doctor</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">09:00~21:00</td>
+                        <td colspan="14">(020) 38906699</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>응</td>
+                        <td colspan="7">?球?生</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">
+                            09:00~21:00<br> 09:00~18:00
+                        </td>
+                        <td colspan="14">1st floor, Building D, Tianyu Garden, No.136 Linhe Zhong Rd, Guangzhou</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td colspan="2" rowspan="8">심천</td>
+                        <td>한</td>
+                        <td colspan="7">하이안청 의료센터</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">(0755) 21677955</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td></td>
+                        <td colspan="7">海岸城??中心</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">深?市南山?天利中央商??? C座 901?903?元&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">써커우 의료센터</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">(0755) 26674855</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">蛇口??中心、蛇口?科中心</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">深?市南山?蛇口工?四路?南海大道交??万融大厦A座5?</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td></td>
+                        <td colspan="7">띠왕 의료센터</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">(0755) 22201852</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td></td>
+                        <td colspan="7">地王??中心</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">深?市?湖?深南?路5002?地王商?中心商?大?北翼G4城</td>
+                    </tr>
+                    <tr>
+                        <td>한</td>
+                        <td colspan="7">회전중심 의원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">(0755) 83479801</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">?展中心?所</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">福田?福?三路 168???商?中心裙? 2?&nbsp;</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td colspan="2" rowspan="2">동관</td>
+                        <td></td>
+                        <td colspan="7">Global Doctor</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">0 9:00~18:00</td>
+                        <td colspan="14">(0769) 22030011</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td>응</td>
+                        <td colspan="7">?球?生</td>
+                        <td>토</td>
+                        <td></td>
+                        <td colspan="3">09:00~18:00</td>
+                        <td colspan="14">No.28 IEO International Block, Dynatown, Dongcheng District, Dongguan</td>
+                    </tr>
+                    </tbody></table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div id="CN-32" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">
+                    협약병원 목록
+                </h4>
+            </div>
+            <div class="modal-body no-padding">
+                <table class="table table-bordered hospital">
+                    <tbody><tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="2" rowspan="2">도시</th>
+                        <th colspan="8" rowspan="2">
+                            병원명<br> (한 : 한국어가능 / 응 : 응급의료센터)
+                        </th>
+                        <th colspan="5" rowspan="2">진료시간</th>
+                        <th colspan="14">전화번호</th>
+                        <th rowspan="2">
+                            내<br> 과
+                        </th>
+                        <th rowspan="2">
+                            외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            산<br> 부<br> 인<br> 과
+                        </th>
+                        <th rowspan="2">
+                            소<br> 아<br> 과
+                        </th>
+                        <th rowspan="2">
+                            치<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 신<br> 건<br> 강<br>
+                        </th>
+                        <th rowspan="2">
+                            영<br> 상<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            마<br> 취<br> 통<br> 증
+                        </th>
+                        <th rowspan="2">
+                            건<br> 강<br> 관<br> 리
+                        </th>
+                        <th rowspan="2">
+                            진<br> 단<br> 검<br> 사
+                        </th>
+                        <th rowspan="2">
+                            응<br> 급<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            안<br> 과
+                        </th>
+                        <th rowspan="2">
+                            이<br> 비<br> 인<br> 후
+                        </th>
+                        <th rowspan="2">
+                            피<br> 부<br> 과
+                        </th>
+                        <th rowspan="2">
+                            성<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            비<br> 뇨<br> 기<br> 과
+                        </th>
+                        <th rowspan="2">
+                            심<br> 혈<br> 관<br> 과
+                        </th>
+                        <th rowspan="2">
+                            중<br> 의<br> 과
+                        </th>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="14">주소</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="2">남경</td>
+                        <td></td>
+                        <td colspan="7">Global Doctor</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">09:00~18:30</td>
+                        <td colspan="14">(025) 86518600</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td>응</td>
+                        <td colspan="7">?球?生</td>
+                        <td>토</td>
+                        <td></td>
+                        <td colspan="3">09:00~18:30</td>
+                        <td colspan="14">1st Floor, Building 1, Zuolingfengdu Garden, 6 Mochouhu East Rd. Nanjing</td>
+                    </tr>
+                    </tbody></table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div id="CN-21" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">
+                    협약병원 목록
+                </h4>
+            </div>
+            <div class="modal-body no-padding">
+                <table class="table table-bordered hospital">
+                    <tbody><tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="2" rowspan="2">도시</th>
+                        <th colspan="8" rowspan="2">
+                            병원명<br> (한 : 한국어가능 / 응 : 응급의료센터)
+                        </th>
+                        <th colspan="5" rowspan="2">진료시간</th>
+                        <th colspan="14">전화번호</th>
+                        <th rowspan="2">
+                            내<br> 과
+                        </th>
+                        <th rowspan="2">
+                            외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            산<br> 부<br> 인<br> 과
+                        </th>
+                        <th rowspan="2">
+                            소<br> 아<br> 과
+                        </th>
+                        <th rowspan="2">
+                            치<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 신<br> 건<br> 강<br>
+                        </th>
+                        <th rowspan="2">
+                            영<br> 상<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            마<br> 취<br> 통<br> 증
+                        </th>
+                        <th rowspan="2">
+                            건<br> 강<br> 관<br> 리
+                        </th>
+                        <th rowspan="2">
+                            진<br> 단<br> 검<br> 사
+                        </th>
+                        <th rowspan="2">
+                            응<br> 급<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            안<br> 과
+                        </th>
+                        <th rowspan="2">
+                            이<br> 비<br> 인<br> 후
+                        </th>
+                        <th rowspan="2">
+                            피<br> 부<br> 과
+                        </th>
+                        <th rowspan="2">
+                            성<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            비<br> 뇨<br> 기<br> 과
+                        </th>
+                        <th rowspan="2">
+                            심<br> 혈<br> 관<br> 과
+                        </th>
+                        <th rowspan="2">
+                            중<br> 의<br> 과
+                        </th>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="14">주소</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="2">선양</td>
+                        <td></td>
+                        <td colspan="7">Global Doctor</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:30~04:30</td>
+                        <td colspan="14">(024) 24330678</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>응</td>
+                        <td colspan="7">?球?生</td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="3" class="text-center">X</td>
+                        <td colspan="14">No.54 Pangjiang Street, Dadong District, Shenyang</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td colspan="2" rowspan="2">대련</td>
+                        <td>한</td>
+                        <td colspan="7">평화병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">07:00~21:00</td>
+                        <td colspan="14">(0411) 87615500&nbsp;&nbsp;</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td></td>
+                        <td colspan="7">和平??</td>
+                        <td>토</td>
+                        <td>일</td>
+                        <td colspan="3">07:00~21:00</td>
+                        <td colspan="14">??省大?市???金?路管委?后身???西?北走富邦??</td>
+                    </tr>
+                    </tbody></table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div id="CN-37" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">
+                    협약병원 목록
+                </h4>
+            </div>
+            <div class="modal-body no-padding">
+                <table class="table table-bordered hospital">
+                    <tbody><tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="2" rowspan="2">도시</th>
+                        <th colspan="8" rowspan="2">
+                            병원명<br> (한 : 한국어가능 / 응 : 응급의료센터)
+                        </th>
+                        <th colspan="5" rowspan="2">진료시간</th>
+                        <th colspan="14">전화번호</th>
+                        <th rowspan="2">
+                            내<br> 과
+                        </th>
+                        <th rowspan="2">
+                            외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            산<br> 부<br> 인<br> 과
+                        </th>
+                        <th rowspan="2">
+                            소<br> 아<br> 과
+                        </th>
+                        <th rowspan="2">
+                            치<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 신<br> 건<br> 강<br>
+                        </th>
+                        <th rowspan="2">
+                            영<br> 상<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            마<br> 취<br> 통<br> 증
+                        </th>
+                        <th rowspan="2">
+                            건<br> 강<br> 관<br> 리
+                        </th>
+                        <th rowspan="2">
+                            진<br> 단<br> 검<br> 사
+                        </th>
+                        <th rowspan="2">
+                            응<br> 급<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            안<br> 과
+                        </th>
+                        <th rowspan="2">
+                            이<br> 비<br> 인<br> 후
+                        </th>
+                        <th rowspan="2">
+                            피<br> 부<br> 과
+                        </th>
+                        <th rowspan="2">
+                            성<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            비<br> 뇨<br> 기<br> 과
+                        </th>
+                        <th rowspan="2">
+                            심<br> 혈<br> 관<br> 과
+                        </th>
+                        <th rowspan="2">
+                            중<br> 의<br> 과
+                        </th>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="14">주소</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="2">청도</td>
+                        <td>한</td>
+                        <td colspan="7">한국인병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:00~17:30</td>
+                        <td colspan="14">No.57 Pangjiang Street, Dadong District, Shenyang</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">????人?院</td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="3" class="text-center">X</td>
+                        <td colspan="14">??市城???流亭工??</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td colspan="2" rowspan="4">연태</td>
+                        <td>한</td>
+                        <td colspan="7">명강내과</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">07:00~18:00</td>
+                        <td colspan="14">155-5356-5761</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td></td>
+                        <td colspan="7">?康?所</td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="3" class="text-center">X</td>
+                        <td colspan="14">山?省烟台市?山?桐林路83?四季花城正?旁</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">경제기술개발구병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">365일 24시간</td>
+                        <td colspan="14">(053) 5638-7840&nbsp;</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="7">烟台??技?????院</td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="3"></td>
+                        <td colspan="14">山?省烟台??技????泰山路11?</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td colspan="2" rowspan="2">위해</td>
+                        <td></td>
+                        <td colspan="7">경제기술개발구병원</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">08:30~17:30</td>
+                        <td colspan="14">18763103168</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <td></td>
+                        <td colspan="7">威海市??????院</td>
+                        <td></td>
+                        <td></td>
+                        <td colspan="3" class="text-center">X</td>
+                        <td colspan="14">威海市??大道80?</td>
+                    </tr>
+                    </tbody></table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div id="CN-42" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">
+                    협약병원 목록
+                </h4>
+            </div>
+            <div class="modal-body no-padding">
+                <table class="table table-bordered hospital">
+                    <tbody><tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="2" rowspan="2">도시</th>
+                        <th colspan="8" rowspan="2">
+                            병원명<br> (한 : 한국어가능 / 응 : 응급의료센터)
+                        </th>
+                        <th colspan="5" rowspan="2">진료시간</th>
+                        <th colspan="14">전화번호</th>
+                        <th rowspan="2">
+                            내<br> 과
+                        </th>
+                        <th rowspan="2">
+                            외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            산<br> 부<br> 인<br> 과
+                        </th>
+                        <th rowspan="2">
+                            소<br> 아<br> 과
+                        </th>
+                        <th rowspan="2">
+                            치<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 신<br> 건<br> 강<br>
+                        </th>
+                        <th rowspan="2">
+                            영<br> 상<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            마<br> 취<br> 통<br> 증
+                        </th>
+                        <th rowspan="2">
+                            건<br> 강<br> 관<br> 리
+                        </th>
+                        <th rowspan="2">
+                            진<br> 단<br> 검<br> 사
+                        </th>
+                        <th rowspan="2">
+                            응<br> 급<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            안<br> 과
+                        </th>
+                        <th rowspan="2">
+                            이<br> 비<br> 인<br> 후
+                        </th>
+                        <th rowspan="2">
+                            피<br> 부<br> 과
+                        </th>
+                        <th rowspan="2">
+                            성<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            비<br> 뇨<br> 기<br> 과
+                        </th>
+                        <th rowspan="2">
+                            심<br> 혈<br> 관<br> 과
+                        </th>
+                        <th rowspan="2">
+                            중<br> 의<br> 과
+                        </th>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="14">주소</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="2">우한</td>
+                        <td></td>
+                        <td colspan="7">Global Doctor</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">09:00~18:00</td>
+                        <td colspan="14">(027) 87656685</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>응</td>
+                        <td colspan="7">?球?生</td>
+                        <td>토</td>
+                        <td></td>
+                        <td colspan="3">09:00~18:00</td>
+                        <td colspan="14">No.241 Liuyang Road, Tong Ren Hospital, Wuchang District, Wuhan&nbsp;</td>
+                    </tr>
+                    </tbody></table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div id="CN-51" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">
+                    협약병원 목록
+                </h4>
+            </div>
+            <div class="modal-body no-padding">
+                <table class="table table-bordered hospital">
+                    <tbody><tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="2" rowspan="2">도시</th>
+                        <th colspan="8" rowspan="2">
+                            병원명<br> (한 : 한국어가능 / 응 : 응급의료센터)
+                        </th>
+                        <th colspan="5" rowspan="2">진료시간</th>
+                        <th colspan="14">전화번호</th>
+                        <th rowspan="2">
+                            내<br> 과
+                        </th>
+                        <th rowspan="2">
+                            외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            산<br> 부<br> 인<br> 과
+                        </th>
+                        <th rowspan="2">
+                            소<br> 아<br> 과
+                        </th>
+                        <th rowspan="2">
+                            치<br> 과
+                        </th>
+                        <th rowspan="2">
+                            신<br> 경<br> 과
+                        </th>
+                        <th rowspan="2">
+                            정<br> 신<br> 건<br> 강<br>
+                        </th>
+                        <th rowspan="2">
+                            영<br> 상<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            마<br> 취<br> 통<br> 증
+                        </th>
+                        <th rowspan="2">
+                            건<br> 강<br> 관<br> 리
+                        </th>
+                        <th rowspan="2">
+                            진<br> 단<br> 검<br> 사
+                        </th>
+                        <th rowspan="2">
+                            응<br> 급<br> 의<br> 학<br> 과
+                        </th>
+                        <th rowspan="2">
+                            안<br> 과
+                        </th>
+                        <th rowspan="2">
+                            이<br> 비<br> 인<br> 후
+                        </th>
+                        <th rowspan="2">
+                            피<br> 부<br> 과
+                        </th>
+                        <th rowspan="2">
+                            성<br> 형<br> 외<br> 과
+                        </th>
+                        <th rowspan="2">
+                            비<br> 뇨<br> 기<br> 과
+                        </th>
+                        <th rowspan="2">
+                            심<br> 혈<br> 관<br> 과
+                        </th>
+                        <th rowspan="2">
+                            중<br> 의<br> 과
+                        </th>
+                    </tr>
+                    <tr style="background-color: rgb(238, 238, 238);">
+                        <th colspan="14">주소</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="2">성도</td>
+                        <td></td>
+                        <td colspan="7">Global Doctor</td>
+                        <td colspan="2">평일&nbsp;</td>
+                        <td colspan="3">09:00~18:00</td>
+                        <td colspan="14">(028) 85283660</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2" class="text-center">O</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>응</td>
+                        <td colspan="7">?球?生</td>
+                        <td>토</td>
+                        <td></td>
+                        <td colspan="3">09:00~12:00</td>
+                        <td colspan="14">Room 9-11 / 2nd floor, South Entrance, Lippo Tower, No. 62 Kehua North Rd, Chengdu</td>
+                    </tr>
+                    </tbody></table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 <script src="jquery-1.11.1.min.js"></script>
 <script src="jquery-jvectormap-2.0.4.min.js"></script>
 <!-- <script src="jqvmap/jquery.vmap.js"></script> -->
